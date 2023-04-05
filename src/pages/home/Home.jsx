@@ -1,8 +1,12 @@
 import React from "react";
-import { Search } from "../../components";
+import { Header, Search } from "../../components";
 
 const Home = () => {
-  return <div>Home</div>;
+  return (
+    <main>
+      <Header />
+    </main>
+  );
 };
 
 export default Home;
