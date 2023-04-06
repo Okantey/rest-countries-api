@@ -1,0 +1,55 @@
+.country__display {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  padding-inline: var(--body-padding);
+  margin-top: 2rem;
+}
+.country__img {
+  width: 100%;
+  height: 8rem;
+  object-fit: cover;
+}
+.country__item {
+  text-decoration: none;
+  color: black;
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+}
+.country__props {
+  padding: 0.5rem 1rem;
+}
+.country__props span {
+  font-weight: 500;
+}
+.country__name {
+  font-weight: var(--very-bold-weight);
+}
+
+@media (min-width: 2000px) {
+  .country__display {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+@media (max-width: 1200px) {
+  .country__display {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 980px) {
+  .country__display {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  .country__display {
+    grid-template-columns: 1fr;
+  }
+}

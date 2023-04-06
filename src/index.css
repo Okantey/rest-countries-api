@@ -1,13 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;800&display=swap");
 :root {
-  --Dark-Blue: hsl(209, 23%, 22%);
-  --Very-Dark-Blue: hsl(207, 26%, 17%);
-  --Very-Dark-Blue: hsl(200, 15%, 8%);
-  --Dark-Gray: hsl(0, 0%, 52%);
-  --Very-Light-Gray: hsl(0, 0%, 98%);
-  --White: hsl(0, 0%, 100%);
-  --mobile-breakpoint: 375px;
+  --dark-blue: hsl(209, 23%, 22%);
+  --very-dark-blue: hsl(207, 26%, 17%);
+  --very-dark-blue: hsl(200, 15%, 8%);
+  --dark-gray: hsl(0, 0%, 52%);
+  --very-light-gray: hsl(0, 0%, 98%);
+  --white: hsl(0, 0%, 100%);
+  --mobile-breakpoint: 400px;
   --font-family: "Nunito Sans", sans-serif;
+  --body-padding: 5%;
+  --normal-weight: 400;
+  --very-bold-weight: 800;
 }
 
 html {
@@ -22,4 +25,7 @@ html {
 
 body {
   font-family: var(--font-family);
+  margin: 0;
+  padding: 0;
+  font-weight: var(--normal-weight);
 }

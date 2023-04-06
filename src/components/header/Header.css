@@ -1,0 +1,38 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-inline: var(--body-padding);
+  padding-block: 0.8rem;
+  /* From https://css.glass */
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  position: sticky;
+  top: 0;
+  z-index: 99;
+  background: rgba(255, 255, 255, 0.2);
+}
+.header__title {
+  line-height: 0;
+  font-size: 1.5rem;
+}
+.theme__switcher {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  background: none;
+  border: none;
+  font-family: var(--font-family);
+  cursor: pointer;
+}
+.theme__switcher span {
+  font-weight: 600;
+}
+
+@media (max-width: 500px) {
+  .header__title {
+    font-size: 1rem;
+  }
+}
