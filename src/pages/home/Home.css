@@ -30,6 +30,12 @@
   font-weight: var(--very-bold-weight);
 }
 
+/* filtering section */
+.filtering__section {
+  margin-block: 1rem;
+  padding-inline: var(--body-padding);
+}
+
 @media (min-width: 2000px) {
   .country__display {
     grid-template-columns: repeat(5, 1fr);

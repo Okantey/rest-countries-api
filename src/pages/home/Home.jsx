@@ -6,7 +6,9 @@ import "./Home.css";
 const Home = () => {
   const [countries, setCountries] = useState([]);
   const [error, setError] = useState(null);
+  const [search, setSearch] = useState("");
   const fetchCountriesURL = "http://localhost:3500/data";
+
   useEffect(() => {
     const fetchCountries = async () => {
       try {
@@ -24,7 +26,9 @@ const Home = () => {
   return (
     <main>
       <Header />
-      {/* <Search /> */}
+      <section className="filtering__section">
+        <Search search={search} setSearch={setSearch} />
+      </section>
       {error && (
         <p
           style={{

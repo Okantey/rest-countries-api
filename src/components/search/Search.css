@@ -1,0 +1,26 @@
+.search__box {
+  display: flex;
+  gap: 0.5rem;
+  padding-inline: 0.5rem;
+  align-items: center;
+  width: fit-content;
+  padding-block: 0.5rem;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 0.2rem;
+}
+.search__box input {
+  border: none;
+  outline: none;
+  width: fit-content;
+}
+.search__box input::placeholder {
+  font-family: var(--font-family);
+}
+.search__form label {
+  position: absolute;
+  left: -99999px;
+}
