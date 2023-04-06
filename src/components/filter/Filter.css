@@ -1,0 +1,10 @@
+.filter__box {
+  padding-block: 0.6rem;
+  padding-inline: 1.2rem;
+  outline: none;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 1);
+  border-radius: 1rem;
+  transition: 0.25s ease-in;
+}
