@@ -23,6 +23,11 @@ const Home = () => {
     };
     (async () => await fetchCountries())();
   }, []);
+
+  const filteredCountries = countries.filter((country) =>
+    country.name.toLowerCase().includes(search.toLowerCase())
+  );
+
   return (
     <main>
       <Header />
@@ -43,7 +48,7 @@ const Home = () => {
         </p>
       )}
       <section className="country__display">
-        {countries.map((country) => {
+        {filteredCountries.map((country) => {
           return (
             <Link
               to={`/country/details:${country.name}`}
