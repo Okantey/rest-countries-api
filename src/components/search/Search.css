@@ -7,7 +7,7 @@
   padding-block: 0.5rem;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   border: 1px solid rgba(255, 255, 255, 0.3);
-  background: rgba(255, 255, 255, 1);
+  background: inherit;
   border-radius: 0.5rem;
   transition: 0.25s ease-in;
 }
@@ -16,10 +16,14 @@
   border: none;
   outline: none;
   width: fit-content;
+  background: inherit;
+  color: inherit;
 }
 .search__box input::placeholder {
   font-family: var(--font-family);
   font-size: 1rem;
+  background: inherit;
+  color: inherit;
 }
 .search__form label {
   position: absolute;

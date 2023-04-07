@@ -3,8 +3,9 @@
   padding-inline: 1.2rem;
   outline: none;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  background: inherit;
+  color: inherit;
   border: 1px solid rgba(255, 255, 255, 0.3);
-  background: rgba(255, 255, 255, 1);
   transition: 0.25s ease-in;
   cursor: pointer;
   background-image: none;
@@ -14,4 +15,14 @@
   border-radius: 0.5rem;
   font-size: 1rem;
   font-family: var(--font-family);
+}
+.filter__box option {
+  background: inherit;
+  color: initial;
+}
+
+@media (max-width: 500px) {
+  .filter__box {
+    text-align: center;
+  }
 }
