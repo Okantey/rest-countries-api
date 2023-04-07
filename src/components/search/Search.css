@@ -18,6 +18,7 @@
   width: fit-content;
   background: inherit;
   color: inherit;
+  font-weight: 700;
 }
 .search__box input::placeholder {
   font-family: var(--font-family);
