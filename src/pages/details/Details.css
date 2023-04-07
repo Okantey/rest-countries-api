@@ -1,0 +1,53 @@
+.country__details__center {
+  display: grid;
+  place-items: center;
+  height: 70vh;
+}
+.back__btn__box {
+  padding-inline: var(--body-padding);
+  padding-block: 2rem;
+}
+.back__btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem;
+  padding: 0.5rem 1.5rem;
+  font-family: var(--font-family);
+  font-size: 1.2rem;
+  font-weight: 800;
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  cursor: pointer;
+}
+
+.details__display {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  padding-inline: var(--body-padding);
+}
+
+.country__flag__box img {
+  width: 40rem;
+  height: 25rem;
+  object-fit: cover;
+}
+
+.sub__details__title {
+  font-weight: 600;
+}
+
+@media (max-width: 1000px) {
+  .details__display {
+    grid-template-columns: 1fr;
+  }
+  .country__flag__box img {
+    width: 100%;
+  }
+}

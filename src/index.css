@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;800&display=swap");
 :root {
   --dark-blue: hsl(209, 23%, 22%);
   --very-dark-blue: hsl(207, 26%, 17%);
@@ -11,6 +11,7 @@
   --body-padding: 5%;
   --normal-weight: 400;
   --very-bold-weight: 800;
+  --bg-color: #fbfcfa;
 }
 
 html {
@@ -28,4 +29,5 @@ body {
   margin: 0;
   padding: 0;
   font-weight: var(--normal-weight);
+  background: var(--bg-color);
 }
