@@ -9,7 +9,7 @@
   --mobile-breakpoint: 400px;
   --font-family: "Nunito Sans", sans-serif;
   --body-padding: 5%;
-  --normal-weight: 400;
+  --normal-weight: 500;
   --very-bold-weight: 800;
   --bg-color: #fbfcfa;
 }
@@ -17,6 +17,7 @@
 html {
   font-size: 100%;
 }
+
 ::before,
 ::after {
   box-sizing: border-box;
