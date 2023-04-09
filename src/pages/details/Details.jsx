@@ -61,14 +61,19 @@ const Details = () => {
                   </span>
                   <span>{data.topLevelDomain}</span>
                 </p>
-                {/* <p>
-                <span className="sub__details__title">Currencies: </span>
-                <span>{data.currencies[0].code}</span>
-              </p>
-              <p>
-                <span className="sub__details__title">Languages: </span>
-                <span>{data.languages[0]}</span>
-              </p> */}
+                <div>
+                  <span className="sub__details__title">Currencies: </span>
+                  {data.currencies && data.currencies.length > 0 && (
+                    <div>
+                      <span>{data.currencies[0].code}</span>
+                      <span>{data.currencies[0].name}</span>
+                      <span>{data.currencies[0].symbol}</span>
+                    </div>
+                  )}
+                </div>
+                <div>
+                  <span className="sub__details__title">Languages: </span>
+                </div>
               </div>
             </div>
           </div>
