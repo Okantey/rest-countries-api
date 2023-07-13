@@ -14,7 +14,9 @@ const Home = () => {
 
   useEffect(() => {
     const fetchCountries = async () => {
+      // make an asynchronous request to the backend api
       try {
+        // initiate preloader by setting boolean state to true
         setIsLoading(true);
         const response = await fetch(API_URL);
         if (!response.ok) throw Error("Unable to fetch data");
@@ -22,6 +24,7 @@ const Home = () => {
         setCountries(countriesFetched);
         setError(null);
       } catch (err) {
+        // retrieve any errors and store in the SetError state
         setError(err.message);
       } finally {
         setIsLoading(false);
