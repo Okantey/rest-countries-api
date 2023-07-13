@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { Filter, Header, Search } from "../../components";
+import CircularProgress from "@mui/material/CircularProgress";
 import "./Home.css";
 
 const Home = () => {
@@ -9,10 +10,12 @@ const Home = () => {
   const [search, setSearch] = useState("");
   const [filter, setFilter] = useState("");
   const API_URL = "http://localhost:3500/data";
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     const fetchCountries = async () => {
       try {
+        setIsLoading(true);
         const response = await fetch(API_URL);
         if (!response.ok) throw Error("Unable to fetch data");
         const countriesFetched = await response.json();
@@ -20,6 +23,8 @@ const Home = () => {
         setError(null);
       } catch (err) {
         setError(err.message);
+      } finally {
+        setIsLoading(false);
       }
     };
     (async () => await fetchCountries())();
@@ -60,37 +65,57 @@ const Home = () => {
         </p>
       )}
       <section className="country__display">
-        {filteredCountries.map((country) => {
-          return (
-            <Link
-              to={`/country/details/:${country.name}`}
-              key={country.name}
-              className="country__item"
-              onClick={() => handleCountryClick(country.name)}
-            >
-              <img
-                src={country.flag}
-                alt={country.name}
-                className="country__img"
-              />
-              <div className="country__props">
-                <p className="country__name">{country.name}</p>
-                <p>
-                  <span>Population: </span>
-                  {country.population}
-                </p>
-                <p>
-                  <span>Region: </span>
-                  {country.region}
-                </p>
-                <p>
-                  <span>Capital: </span>
-                  {country.capital}
-                </p>
-              </div>
-            </Link>
-          );
-        })}
+        {isLoading ? (
+          <div
+            style={{
+              width: "100dvw",
+              height: "70dvh",
+              display: "grid",
+              placeItems: "center",
+              textAlign: "center",
+              overflowX: "hidden",
+            }}
+          >
+            <CircularProgress
+              style={{
+                textAlign: "center",
+                color: "white",
+              }}
+            />
+          </div>
+        ) : (
+          filteredCountries.map((country) => {
+            return (
+              <Link
+                to={`/country/details/:${country.name}`}
+                key={country.name}
+                className="country__item"
+                onClick={() => handleCountryClick(country.name)}
+              >
+                <img
+                  src={country.flag}
+                  alt={country.name}
+                  className="country__img"
+                />
+                <div className="country__props">
+                  <p className="country__name">{country.name}</p>
+                  <p>
+                    <span>Population: </span>
+                    {country.population}
+                  </p>
+                  <p>
+                    <span>Region: </span>
+                    {country.region}
+                  </p>
+                  <p>
+                    <span>Capital: </span>
+                    {country.capital}
+                  </p>
+                </div>
+              </Link>
+            );
+          })
+        )}
       </section>
     </main>
   );
