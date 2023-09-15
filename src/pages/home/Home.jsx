@@ -9,7 +9,8 @@ const Home = () => {
   const [error, setError] = useState(null);
   const [search, setSearch] = useState("");
   const [filter, setFilter] = useState("");
-  const API_URL = "http://localhost:3500/data";
+  const API_URL =
+    "https://rest-countries-api-34028-default-rtdb.firebaseio.com/data.json";
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
