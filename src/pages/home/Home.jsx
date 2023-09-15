@@ -18,7 +18,7 @@ const Home = () => {
       // make an asynchronous request to the backend api
       try {
         // initiate preloader by setting boolean state to true
-        setIsLoading(true);
+
         const response = await fetch(API_URL);
         if (!response.ok) throw Error("Unable to fetch data");
         const countriesFetched = await response.json();
